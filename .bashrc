@@ -1,4 +1,11 @@
-PS1='[\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[0m\]] \$'
+source ~/git/contrib/completion/git-completion.bash
+source ~/git/contrib/completion/git-prompt.sh
+
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWUNTRACKEDFILES=1
+
+export PS1='\[$(tput bold)\]\[$(tput setaf 7)\][\[$(tput setaf 4)\]\u\[$(tput setaf 7)\]@\[$(tput setaf 1)\]\h \[$(tput setaf 2)\]\W$(__git_ps1 "\[$(tput setaf 7)\]:\[$(tput setaf 5)\]%s")\[$(tput setaf 7)\]]\\$\[$(tput sgr0)\] ';
+
 
 alias rm='rm -i'
 alias cp='cp -i'
