@@ -7,3 +7,5 @@ source .pythonrc
 export LC_ALL=en_US.UTF-8
 
 HISTSIZE=5000
+
+export PATH=/opt/homebrew/bin:$PATH
